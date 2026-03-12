@@ -2655,7 +2655,10 @@ function initGameFromData(data, region, idx) {
     currentLevelData._activeDim = scaledDim;
     currentLevelData._activeMask = mask;
 
-    const maxPuzzleSize = Math.min(window.innerWidth * 0.6, 450);
+    const isMobile = window.innerWidth <= 768;
+    const maxPuzzleSize = isMobile 
+        ? Math.min(window.innerWidth * 0.85, 500) 
+        : Math.min(window.innerWidth * 0.6, 450);
     PIXEL_SIZE = Math.min(50, maxPuzzleSize / scaledDim);
 
     const unassignedByColor = {};
@@ -2671,8 +2674,9 @@ function initGameFromData(data, region, idx) {
     }
 
     pieces = [];
-    canvas.width = window.innerWidth * 0.9;
-    canvas.height = window.innerHeight * 0.6; // Reduced from 0.7 to ensure UI fits on screen
+    canvas.width = window.innerWidth * 0.95;
+    const mobileUIHeightFactor = window.innerWidth <= 768 ? 0.45 : 0.6;
+    canvas.height = window.innerHeight * mobileUIHeightFactor; 
 
     const targetX = (canvas.width - mask[0].length * PIXEL_SIZE) / 2;
     const targetY = (canvas.height - mask.length * PIXEL_SIZE) / 2;

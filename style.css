@@ -798,6 +798,54 @@ canvas:active {
 
     .menu-top-header h2.is-en {
         font-size: 2rem;
-        letter-spacing: 1rem;
+        letter-spacing: 1.2rem;
+    }
+
+    /* --- GAME UI MOBILE ADJUSTMENTS --- */
+    #game-ui header {
+        padding: 0.8rem 1.2rem !important;
+    }
+
+    .header-left {
+        gap: 0.6rem !important;
+    }
+
+    .small-title {
+        font-size: 0.95rem !important;
+        letter-spacing: 1px !important;
+    }
+
+    #game-timer-container {
+        gap: 4px !important;
+    }
+
+    #game-timer {
+        font-size: 1.1rem !important;
+    }
+
+    .stats .label {
+        font-size: 0.5rem !important;
+        letter-spacing: 1px !important;
+        margin-right: 2px !important;
+    }
+
+    .stats .value {
+        font-size: 1.2rem !important;
+    }
+
+    .bottom-controls {
+        gap: 12px !important;
+        margin-top: 1rem !important;
+    }
+
+    .premium-btn {
+        padding: 0.6rem 1.2rem !important;
+        font-size: 0.75rem !important;
+        letter-spacing: 1px !important;
+    }
+
+    .canvas-wrapper {
+        padding: 1rem !important;
+        border-radius: 20px !important;
     }
 }
